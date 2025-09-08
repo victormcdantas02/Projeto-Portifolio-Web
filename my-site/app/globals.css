@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-
   --primary-blue: #3b82f6;
   --light-blue: #60a5fa;
   --dark-blue: #2563eb;
-
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -68,10 +66,10 @@ nav a:hover {
 }
 
 section {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,33 +82,36 @@ section {
   margin: 0;
   max-width: 100%;
   border-radius: 0;
+  min-height: 60vh;
+  padding: 3rem 2rem;
 }
 
 #hero h1 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #hero p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   opacity: 0.9;
   font-weight: 300;
 }
 
-#about {
+#about, #contact, #projects {
   background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: 0 10px 40px var(--shadow);
-  margin: 2rem auto;
-  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px var(--shadow);
+  margin: 1.5rem auto;
+  padding: 2.5rem;
   border: 1px solid var(--border-color);
+  min-height: auto;
 }
 
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+#about h2, #contact h2, #projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   color: var(--primary-blue);
   font-weight: 700;
@@ -128,21 +129,51 @@ section {
   color: var(--text-secondary);
 }
 
-#contact {
-  background: var(--card-bg);
-  border-radius: 20px;
-  box-shadow: 0 10px 40px var(--shadow);
-  margin: 2rem auto;
-  padding: 3rem;
-  border: 1px solid var(--border-color);
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px var(--shadow);
   text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+  border-color: var(--light-blue);
+}
+
+.project-card h3 {
   color: var(--primary-blue);
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  background: var(--light-blue);
+  transform: translateY(-1px);
 }
 
 .contact-links {
@@ -192,6 +223,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -203,21 +238,27 @@ html {
     gap: 1rem;
   }
 
+  #hero {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
+
   #hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   #hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   section {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     margin: 1rem;
   }
 
-  #about, #contact {
+  #about, #contact, #projects {
     padding: 2rem 1.5rem;
+    margin: 1rem;
   }
 
   .contact-item {
@@ -225,8 +266,8 @@ html {
     text-align: center;
     gap: 1rem;
   }
-}
 
-* {
-  transition: all 0.3s ease;
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

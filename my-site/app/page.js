@@ -15,8 +15,8 @@ export default function Home() {
 
       
       <section id="hero">
-        <h1>Olá, meu nome é Victor</h1>
-        <p>Boas vindas ao meu portfólio!</p>
+        <h1>Boas vindas ao meu portfólio!</h1>
+        <p>Me chamo Victor Dantas</p>
       </section>
 
       
@@ -30,7 +30,34 @@ export default function Home() {
         </div>
       </section>
 
-      
+      <section id="projects">
+        <h2>Projetos</h2>
+        <div className="projects-grid">
+          <div className="project-card">
+        <h3>Projeto Estrutura de Dados</h3>
+          <p className="project-description">
+          Trabalho que consiste em uma aplicação que utiliza listas encadeadas 
+          para gerenciar um sistema que engloba uma clínica médica, eventos e um restaurante, 
+          armazenando os dados atribuídos ao longo do programa.
+      </p>
+      <div className="project-links">
+         <a href="https://github.com/victormcdantas02/Projeto-ED1" target="_blank" rel="noopener noreferrer">Ver Código</a>
+      </div>
+    </div>
+    
+    <div className="project-card">
+      <h3>Projeto Banco de Dados</h3>
+      <p className="project-description">
+        Projeto acadêmico de banco de dados simulando um parque de diversões 
+        com gerenciamento de visitantes, brinquedos e vendas de ingressos.
+      </p>
+      <div className="project-links">
+      <a href="https://github.com/victormcdantas02/Projeto-Banco" target="_blank" rel="noopener noreferrer">Ver Código</a>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section id="contact">
         <h2>Meus contatos</h2>
         <div className="contact-links">
