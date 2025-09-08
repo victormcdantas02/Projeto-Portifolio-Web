@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      {/* Header/Navegação */}
+      
       <header>
         <nav>
           <h1>Meu Portfólio</h1>
@@ -13,13 +13,13 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Seção Principal */}
+      
       <section id="hero">
         <h1>Olá, meu nome é Victor</h1>
         <p>Boas vindas ao meu portfólio!</p>
       </section>
 
-      {/* Sobre */}
+      
       <section id="about">
         <h2>Sobre Mim</h2>
         <div className="about-content">
@@ -30,9 +30,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contato */}
+      
       <section id="contact">
-        <h2>Contato</h2>
+        <h2>Meus contatos</h2>
         <div className="contact-links">
           <div className="contact-item">
             <span>📧</span>
