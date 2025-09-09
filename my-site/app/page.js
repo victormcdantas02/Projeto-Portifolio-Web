@@ -25,7 +25,7 @@ export default function Home() {
         <h2>Sobre Mim</h2>
         <div className="about-content">
           <div className="about-photo">
-        <img src="victor.jpg" alt="Victor Dantas" />
+        <img src="victor.jpg"/>
       </div>
       <div className="about-text">
         <p>Atualmente tenho 23 anos, sou de Teresina-PI, curso Ciência da Computação desde 2022 e gosto de várias coisas e falar sobre elas</p>
