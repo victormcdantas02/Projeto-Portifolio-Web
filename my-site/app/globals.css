@@ -20,7 +20,6 @@ body {
   color: var(--text-primary);
 }
 
-
 header {
   position: fixed;
   top: 0;
@@ -66,7 +65,6 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-
 section {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -76,7 +74,6 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-
 
 #hero {
   text-align: center;
@@ -106,7 +103,6 @@ section {
   font-weight: 300;
 }
 
-
 #about, #contact, #projects {
   background: var(--card-bg);
   border-radius: 15px;
@@ -117,19 +113,34 @@ section {
   min-height: auto;
 }
 
-
 #about h2, #contact h2, #projects h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--primary-blue);
   font-weight: 700;
 }
 
-
 .about-content {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-photo {
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
 }
 
 .about-text p {
@@ -138,7 +149,6 @@ section {
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
-
 
 .projects-grid {
   display: grid;
@@ -199,7 +209,6 @@ section {
   transform: translateY(-1px);
 }
 
-
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -243,7 +252,6 @@ section {
   color: var(--primary-blue);
 }
 
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -252,7 +260,6 @@ html {
 * {
   transition: all 0.3s ease;
 }
-
 
 @media (max-width: 768px) {
   nav {
@@ -286,6 +293,17 @@ html {
   #about, #contact, #projects {
     padding: 2rem 1.5rem;
     margin: 1rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .about-photo img {
+    width: 180px;
+    height: 180px;
   }
   
   .contact-item {
