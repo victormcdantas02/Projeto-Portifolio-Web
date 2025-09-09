@@ -21,15 +21,18 @@ export default function Home() {
       </section>
 
       
-      <section id="about">
+     <section id="about">
         <h2>Sobre Mim</h2>
         <div className="about-content">
-          <div className="about-text">
-            <p>Atualmente tenho 23 anos, sou de Teresina-PI, curso Ciência da Computação desde 2022 e gosto de várias coisas e falar sobre elas</p>
-            <p>Gosto muito de filmes, jogos, quadrinhos e animações. Tenho sonho de conhecer diferentes países e ajudar pessoas. Profissionalmente estou aberto a qualquer tipo de experiência.</p>
+          <div className="about-photo">
+        <img src="victor.jpg" alt="Victor Dantas" />
+      </div>
+      <div className="about-text">
+        <p>Atualmente tenho 23 anos, sou de Teresina-PI, curso Ciência da Computação desde 2022 e gosto de várias coisas e falar sobre elas</p>
+        <p>Gosto muito de filmes, jogos, quadrinhos e animações. Tenho sonho de conhecer diferentes países e ajudar pessoas. Profissionalmente estou aberto a qualquer tipo de experiência.</p>
           </div>
         </div>
-      </section>
+  </section>
 
       <section id="projects">
         <h2>Projetos</h2>
