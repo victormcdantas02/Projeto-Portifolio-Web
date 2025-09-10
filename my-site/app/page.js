@@ -1,7 +1,21 @@
+'use client';
+import { useState } from 'react';
+
+// Componente do Jogo da Forca
+function JogoDaForca() {
+  return (
+    <div className="jogo-forca">
+      <h3>Jogo da Forca</h3>
+      <div className="jogo-container">
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div>
-      
+     
       <header>
         <nav>
           <h1>Meu Portfólio</h1>
@@ -14,14 +28,12 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-
-      
+     
       <section id="hero">
         <h1>Boas vindas ao meu portfólio!</h1>
         <p>Me chamo Victor Dantas</p>
       </section>
-
-      
+     
      <section id="about">
         <h2>Sobre Mim</h2>
         <div className="about-content">
@@ -34,26 +46,25 @@ export default function Home() {
           </div>
         </div>
   </section>
-
       <section id="projects">
         <h2>Projetos</h2>
         <div className="projects-grid">
           <div className="project-card">
         <h3>Projeto Estrutura de Dados</h3>
           <p className="project-description">
-          Trabalho que consiste em uma aplicação que utiliza listas encadeadas 
-          para gerenciar um sistema que engloba uma clínica médica, eventos e um restaurante, 
+          Trabalho que consiste em uma aplicação que utiliza listas encadeadas
+          para gerenciar um sistema que engloba uma clínica médica, eventos e um restaurante,
           armazenando os dados atribuídos ao longo do programa.
       </p>
       <div className="project-links">
          <a href="https://github.com/victormcdantas02/Projeto-ED1" target="_blank" rel="noopener noreferrer">Ver Código</a>
       </div>
     </div>
-    
+   
     <div className="project-card">
       <h3>Projeto Banco de Dados</h3>
       <p className="project-description">
-        Projeto acadêmico de banco de dados simulando um parque de diversões 
+        Projeto acadêmico de banco de dados simulando um parque de diversões
         com gerenciamento de visitantes, brinquedos e vendas de ingressos.
       </p>
       <div className="project-links">
@@ -62,6 +73,11 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+  <section id="game">
+    <h2>Jogo</h2>
+    <JogoDaForca />
+  </section>
 
       <section id="contact">
         <h2>Meus contatos</h2>

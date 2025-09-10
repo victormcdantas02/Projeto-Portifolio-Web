@@ -315,4 +315,19 @@ html {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .jogo-forca {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  }
+
+  .jogo-container {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  }
 }
