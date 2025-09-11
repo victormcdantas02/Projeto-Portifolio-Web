@@ -18,6 +18,11 @@ body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background: var(--bg-gradient);
   color: var(--text-primary);
+  background-image: 
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    var(--bg-gradient);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
 }
 
 header {
@@ -103,7 +108,7 @@ section {
   font-weight: 300;
 }
 
-#about, #contact, #projects {
+#about, #contact, #projects, #game {
   background: var(--card-bg);
   border-radius: 15px;
   box-shadow: 0 8px 30px var(--shadow);
@@ -113,7 +118,7 @@ section {
   min-height: auto;
 }
 
-#about h2, #contact h2, #projects h2 {
+#about h2, #contact h2, #projects h2, #game h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -252,6 +257,173 @@ section {
   color: var(--primary-blue);
 }
 
+/* Hangman Game Styles */
+.jogo-forca {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jogo-forca h3 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.jogo-container {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow);
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.palavra-display {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.palavra-display h4 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.palavra-display span {
+  color: var(--primary-blue);
+  font-size: 2rem !important;
+  font-weight: 700;
+  letter-spacing: 8px;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.jogo-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.jogo-container p strong {
+  color: var(--text-primary);
+}
+
+.input-container {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container input {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 60px;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-container input::placeholder {
+  color: var(--text-secondary);
+  text-transform: none;
+}
+
+.input-container button,
+.jogo-container > button {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-container button:hover,
+.jogo-container > button:hover {
+  background: var(--light-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.input-container button:disabled {
+  background: var(--text-secondary);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.jogo-finalizado {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.jogo-finalizado p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.hangman-drawing {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.feedback-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.feedback-success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.feedback-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.letras-tentadas {
+  background: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -290,7 +462,7 @@ html {
     margin: 1rem;
   }
   
-  #about, #contact, #projects {
+  #about, #contact, #projects, #game {
     padding: 2rem 1.5rem;
     margin: 1rem;
   }
@@ -316,18 +488,32 @@ html {
     grid-template-columns: 1fr;
   }
 
+  /* Mobile styles for game */
   .jogo-forca {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    padding: 1rem;
   }
-
+  
   .jogo-container {
-  background: #f8f9fa;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .palavra-display span {
+    font-size: 1.5rem !important;
+    letter-spacing: 4px;
+  }
+  
+  .input-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .input-container input {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .hangman-drawing {
+    font-size: 14px;
+    padding: 1rem;
   }
 }

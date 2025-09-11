@@ -1,12 +1,38 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-// Componente do Jogo da Forca
 function JogoDaForca() {
+
+  const palavras = [
+    'ABACATE', 'ABACAXI', 'ACEROLA', 'AMEIXA', 'BANANA', 'CAQUI', 'CARAMBOLA',
+    'GOIABA', 'GRAVIOLA', 'LIMAO', 'MAMAO', 'MANGA', 'MARACUJA', 'MELANCIA',
+    'MELAO', 'MEXERICA', 'MORANGO', 'PESSEGO', 'SAPOTI', 'SERIGUELA',
+    'TAMARINDO', 'TANGERINA', 'ABOBORA', 'CENOURA', 'MANDIOCA', 'PIMENTAO',
+    'TOMATE', 'ALFACE', 'ESPINAFRE', 'CEBOLA'
+  ];
+
+  const [palavraAtual, setPalavraAtual] = useState('');
+  const [letrasAdivinhadas, setLetrasAdivinhadas] = useState([]);
+  const [tentativasRestantes, setTentativasRestantes] = useState(6);
+
+  const iniciarNovoJogo = () => {
+    const palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
+    setPalavraAtual(palavraAleatoria);
+    setLetrasAdivinhadas([]);
+    setTentativasRestantes(6);
+  };
+
+  useEffect(() => {
+    iniciarNovoJogo();
+  }, []);
+
   return (
     <div className="jogo-forca">
-      <h3>Jogo da Forca</h3>
+      <h3>🎮 Jogo da Forca - Frutas e Vegetais</h3>
       <div className="jogo-container">
+        <p>Palavra atual: {palavraAtual}</p>
+        <p>Tentativas restantes: {tentativasRestantes}</p>
+        <button onClick={iniciarNovoJogo}>🔄 Novo Jogo</button>
       </div>
     </div>
   );
@@ -15,7 +41,7 @@ function JogoDaForca() {
 export default function Home() {
   return (
     <div>
-     
+
       <header>
         <nav>
           <h1>Meu Portfólio</h1>
@@ -28,12 +54,12 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-     
+
       <section id="hero">
         <h1>Boas vindas ao meu portfólio!</h1>
         <p>Me chamo Victor Dantas</p>
       </section>
-     
+
      <section id="about">
         <h2>Sobre Mim</h2>
         <div className="about-content">
@@ -60,7 +86,7 @@ export default function Home() {
          <a href="https://github.com/victormcdantas02/Projeto-ED1" target="_blank" rel="noopener noreferrer">Ver Código</a>
       </div>
     </div>
-   
+
     <div className="project-card">
       <h3>Projeto Banco de Dados</h3>
       <p className="project-description">
@@ -73,12 +99,10 @@ export default function Home() {
     </div>
   </div>
 </section>
-
   <section id="game">
     <h2>Jogo</h2>
     <JogoDaForca />
   </section>
-
       <section id="contact">
         <h2>Meus contatos</h2>
         <div className="contact-links">
