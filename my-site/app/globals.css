@@ -14,6 +14,11 @@
   --card-bg: #1e293b;
 }
 
+html  {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+} 
+
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   background: var(--bg-gradient);
@@ -62,6 +67,7 @@ nav a {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -251,6 +257,7 @@ section {
   font-weight: 500;
   color: var(--text-secondary);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .contact-item:hover a {
@@ -262,6 +269,7 @@ section {
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  padding-top: 100px;
 }
 
 .jogo-forca h3 {
@@ -269,6 +277,14 @@ section {
   color: var(--primary-blue);
   margin-bottom: 2rem;
   font-weight: 600;
+}
+
+.descricao-jogo {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-style: italic;
+  opacity: 0.9;
 }
 
 .jogo-container {
@@ -304,4 +320,101 @@ section {
   border: 1px solid var(--border-color);
   width: 200px;
   height: 250px;
+  color: var(--text-primary);
+}
+
+.jogo-info {
+  flex: 1;
+  text-align: left;
+}
+
+.palavra-display h4 {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.palavra-texto {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.3rem;
+  font-family: monospace;
+}
+
+.info-jogo p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.letras-tentadas {
+  background: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.letras-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.letras-corretas, .letras-erradas {
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.letra-input {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  width: 50px;
+}
+
+.btn-tentar, .btn-reiniciar {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--primary-blue);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.btn-tentar:hover, .btn-reiniciar:hover {
+  background: var(--light-blue);
+}
+
+.mensagem {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.mensagem.vitoria {
+  background: rgba(34, 197, 94, 0.1);
+  color: #86efac;
+}
+
+.mensagem.derrota {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
 }

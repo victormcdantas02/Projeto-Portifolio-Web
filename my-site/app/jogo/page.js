@@ -70,41 +70,58 @@ function JogoDaForca() {
     return (
       <div className="forca-container">
         <svg width="200" height="250" viewBox="0 0 200 250" className="forca-svg">
-          <line x1="10" y1="230" x2="100" y2="230" stroke="currentColor" strokeWidth="4"/>
+          {}
+          <line x1="20" y1="230" x2="80" y2="230" stroke="currentColor" strokeWidth="4"/>
+
+          {}
           <line x1="30" y1="230" x2="30" y2="20" stroke="currentColor" strokeWidth="4"/>
+
+          {}
           <line x1="30" y1="20" x2="120" y2="20" stroke="currentColor" strokeWidth="4"/>
+
+          {}
           <line x1="120" y1="20" x2="120" y2="45" stroke="currentColor" strokeWidth="3"/>
 
+          {}
           {erros >= 1 && (
-            <circle cx="120" cy="55" r="12" fill="none" stroke="currentColor" strokeWidth="3"/>
+            <circle cx="120" cy="60" r="15" fill="none" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {erros >= 2 && (
-            <line x1="120" y1="67" x2="120" y2="120" stroke="currentColor" strokeWidth="3"/>
+            <line x1="120" y1="75" x2="120" y2="140" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {erros >= 3 && (
-            <line x1="120" y1="80" x2="95" y2="100" stroke="currentColor" strokeWidth="3"/>
+            <line x1="120" y1="90" x2="95" y2="115" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {erros >= 4 && (
-            <line x1="120" y1="80" x2="145" y2="100" stroke="currentColor" strokeWidth="3"/>
+            <line x1="120" y1="90" x2="145" y2="115" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {erros >= 5 && (
-            <line x1="120" y1="120" x2="95" y2="150" stroke="currentColor" strokeWidth="3"/>
+            <line x1="120" y1="140" x2="95" y2="170" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {erros >= 6 && (
-            <line x1="120" y1="120" x2="145" y2="150" stroke="currentColor" strokeWidth="3"/>
+            <line x1="120" y1="140" x2="145" y2="170" stroke="currentColor" strokeWidth="3"/>
           )}
 
+          {}
           {jogoTerminado && !jogadorVenceu && (
             <>
-              <line x1="115" y1="50" x2="118" y2="53" stroke="currentColor" strokeWidth="2"/>
-              <line x1="118" y1="50" x2="115" y2="53" stroke="currentColor" strokeWidth="2"/>
-              <line x1="122" y1="50" x2="125" y2="53" stroke="currentColor" strokeWidth="2"/>
-              <line x1="125" y1="50" x2="122" y2="53" stroke="currentColor" strokeWidth="2"/>
+              {}
+              <line x1="113" y1="55" x2="118" y2="60" stroke="currentColor" strokeWidth="2"/>
+              <line x1="118" y1="55" x2="113" y2="60" stroke="currentColor" strokeWidth="2"/>
+
+              {}
+              <line x1="122" y1="55" x2="127" y2="60" stroke="currentColor" strokeWidth="2"/>
+              <line x1="127" y1="55" x2="122" y2="60" stroke="currentColor" strokeWidth="2"/>
             </>
           )}
         </svg>
@@ -137,6 +154,9 @@ function JogoDaForca() {
   return (
     <div className="jogo-forca">
       <h3>🎮 Jogo da Forca</h3>
+      <p className="descricao-jogo">
+        Jogo criado para demonstrar os conhecimentos de JavaScript do desenvolvedor do site
+      </p>
 
       <div className="jogo-container">
         <div className="jogo-layout">
@@ -219,7 +239,6 @@ function JogoDaForca() {
 export default function JogoPage() {
   return (
     <div>
-      {}
       <header>
         <nav>
           <h1>
@@ -235,15 +254,7 @@ export default function JogoPage() {
         </nav>
       </header>
 
-      {}
-      <section id="game">
-        <div className="voltar-container">
-          <Link href="/" className="btn-voltar">
-            ← Voltar ao Portfólio
-          </Link>
-        </div>
-        <JogoDaForca />
-      </section>
+      <JogoDaForca />
     </div>
   );
 }
