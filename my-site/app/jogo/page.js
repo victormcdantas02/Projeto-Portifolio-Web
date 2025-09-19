@@ -248,8 +248,8 @@ export default function JogoPage() {
             <li><Link href="/#hero">Início</Link></li>
             <li><Link href="/#about">Sobre</Link></li>
             <li><Link href="/#projects">Projetos</Link></li>
-            <li><Link href="/jogo" className="active">Jogo</Link></li>
             <li><Link href="/#contact">Contato</Link></li>
+            <li><Link href="/jogo" className="active">Jogo</Link></li>
           </ul>
         </nav>
       </header>
